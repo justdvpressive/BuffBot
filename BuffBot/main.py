@@ -6,9 +6,9 @@ from tax import Tax
 import asyncio
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='?')
 
-startup_extensions = ['commands', 'voice', 'coins', 'blackjack', 'channel_mangement', 'lottery', 'tax', 'holdem']
+startup_extensions = ["commands", "voice", 'coins', 'blackjack', 'channel_mangement', 'lottery', 'tax', 'holdem']
 
 
 @bot.event
@@ -26,6 +26,7 @@ async def on_ready():
     await coins.give_coin()
 
     await tax_task
+    await client.changePresence(game=discord.Game(name="My Prefix: ?"))
 
 
 
