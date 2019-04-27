@@ -1,4 +1,3 @@
-libffi-dev
 discord.py[voice]
 youtube-dl
 simpleeval
