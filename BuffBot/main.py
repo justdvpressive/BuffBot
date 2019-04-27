@@ -26,7 +26,7 @@ async def on_ready():
     await coins.give_coin()
 
     await tax_task
-    await client.changePresence(game=discord.Game(name="My Prefix: ?"))
+    await client.change_presence(game=discord.Game(name="My Prefix: ?"))
 
 
 
